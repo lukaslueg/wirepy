@@ -1,0 +1,15 @@
+include configure.ac
+include configure
+include install-sh
+include missing
+include Makefile
+include wirepy/platform.py.in
+include README
+include INSTALL
+include tox.ini
+include requirements.txt
+
+include wirepy/tests/sample_files/*.gz
+include wirepy/tests/sample_files/README
+
+prune wirepy/platform.py
