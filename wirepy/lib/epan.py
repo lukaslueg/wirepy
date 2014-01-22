@@ -77,8 +77,6 @@ class StringValue(FieldValue):
         self.cdata = cdata
 
     def __repr__(self):
-        print(self.cdata.strptr)
-        print(self.cdata.value)
         return '<String value=%i string="%s">' % (self.value, self.string)
 
     def __eq__(self, other):
