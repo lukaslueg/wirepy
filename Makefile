@@ -28,3 +28,6 @@ tox:
 
 sdist:
 	$(PYTHON) setup.py sdist
+
+README: docs/index.rst
+	cd docs && make text && cp _build/text/index.txt ../README
