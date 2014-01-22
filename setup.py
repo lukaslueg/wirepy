@@ -38,11 +38,11 @@ class Tox(TestCommand):
 
 setuptools.setup(name=wirepy.platform.__package_name__,
                  version=wirepy.platform.__package_name__,
-                 description='A tool to do stuff',
+                 description='A foreign function interface to Wireshark',
                  long_description=description,
-                 author='Myself',
-                 author_email='myself@myself.com',
-                 url='http://goatse.cx',
+                 author='Lukas Lueg',
+                 author_email='lukas.lueg@gmail.com',
+                 url='https://github.com/lukaslueg/wirepy',
                  zip_safe=False,  # for cffi
                  requires=list(pip_to_requirements()),
                  setup_requires=['cffi>=0.6'],
