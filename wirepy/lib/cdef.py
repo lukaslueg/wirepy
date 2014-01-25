@@ -1300,6 +1300,7 @@ iface.cdef('''
             */
             static const int COLUMN_FORMATS;
             static int WIREPY_EPAN_INITIALIZED;
+            static int WIREPY_INIT_PROCESS_POLICIES_CALLED;
 
 
             static void (*logfunc_python_callback)(char *msg, int size);

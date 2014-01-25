@@ -34,7 +34,11 @@ mod = iface.verify('''
                    #include <epan/prefs.h>
 
                    static const int COLUMN_FORMATS = NUM_COL_FMTS;
+                   // Declare these here instead of module variables so they
+                   // can be accessed without having to import the respective
+                   // module
                    static int WIREPY_EPAN_INITIALIZED = 0;
+                   static int WIREPY_INIT_PROCESS_POLICIES_CALLED = 0;
 
                    static void (*logfunc_python_callback)(char *msg, int size);
                    static void logfunc_wrapper(const char*msg, ...) {
