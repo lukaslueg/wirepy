@@ -11,6 +11,8 @@ features. `Wireshark`_ provides support for more than 1.300 protocols, more
 than 125.000 fields within those protocols and more than 1.500.000 defined
 values and is actively maintained.
 
+Get the code from `GitHub`_.
+
 .. note::
     This library is created out of pure necessity. I dont' know know where it
     is headed or even feasible to create a direct binding to ``libwireshark``.
@@ -148,6 +150,7 @@ Indices and tables
 
 Generated |today|.
 
+.. _GitHub: https://github.com/lukaslueg/wirepy
 .. _CFFI: https://cffi.readthedocs.org
 .. _`Wireshark`: https://www.wireshark.org
 .. _`CPython`: http://www.python.org
