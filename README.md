@@ -8,7 +8,14 @@ Documentation at http://wirepy.readthedocs.org/
 
 Example:
 ```python
-'''Capture traffic from all interfaces for 30 seconds and dissect http content'''
+'''Capture traffic from all interfaces for 30 seconds and look for HTTP traffic.
+
+Note the use of column.Type.CUSTOM in conjunction with field "http.user_agent".
+The dictionary created in _show() will contain a string like
+"Mozilla/5.0 (X11; Linux x86_64; rv:26.0) Gecko/20100101 Firefox/26.0" when a
+HTTP request is made on the network. We get to this without ever having to really
+look at any of the packets by ourselves.
+'''
 
 import pprint
 from wirepy.lib import column, dfilter, dumpcap, epan, wtap, prefs
@@ -16,7 +23,6 @@ from wirepy.lib import column, dfilter, dumpcap, epan, wtap, prefs
 # Some required setup
 epan.epan_init()
 prefs.read_prefs()
-epan.cleanup_dissection()
 epan.init_dissection()
 
 # Some general information we are interested in for every packet
